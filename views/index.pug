@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Simple Calculator
+  link(rel='stylesheet' href='Bootstraps/css/bootstrap.css')
+  link(rel='stylesheet' href='style.css')
+form(action='/' name='transactionentry' method="POST")
+  .container
+    .card
+      h3 Simple Calc v0.1
+      .card-body
+        b
+          p#result
+        .container
+          .row
+            .col-sm
+              label(for='num1') First Input:
+              br
+              input#num1(type='number' name='num1' placeholder='Number')
+            .col-sm
+              label(for='btn') Operand:
+              br
+              button.btn(type='button' onclick='addNumbers()')
+                | +
+              button.btn(type='button' onclick='subtractNumbers()')
+                | -
+              button.btn(type='button' onclick='multiplyNumbers()')
+                | *
+              button.btn(type='button' onclick='divideNumbers()')
+                | /
+              input.btn.pt-0.pb-0.mt-3(type='submit', value='AC')
+            .col-sm
+              label(for='num2') Second Input:
+              br
+              input#num2(type='number' name='num2' placeholder='Number')
+  footer GROUP 1: Alinda, Wilfred, Dominic, Richard, Gerald.
+  script(src='./Bootstraps/js/bootstrap.js')
+  script(src='./js/calc.js')
