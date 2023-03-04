@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Simple Calculator</title>
+	<link rel="stylesheet" href="../public/Bootstraps/css/bootstrap.css" />
+	<link rel="stylesheet" href="../public/style.css" />
+</head>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4 cardCol">
+			<div class="card">
+				<h3>Simple Calc v1.2</h3>
+				<div class="card-body">
+					<b>
+						<p id="result"></p>
+					</b>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4 inputCol">
+								<label class="inputlabel" for="num1"
+									>First Input:</label
+								><br /><input id="num1" type="number" />
+							</div>
+							<div class="col-sm-4 inputCol">
+								<p id="operand"></p>
+							</div>
+							<div class="col-sm-4 inputCol">
+								<label for="num2" class="inputlabel"
+									>Second Input:</label
+								><br /><input id="num2" type="number" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 operandSelect">
+								<div class="row">
+									<div class="col">
+										<label for="btn">Select Operator:</label
+										><br />
+										<button
+											class="btn"
+											id="addition"
+											onclick="addNumbers()"
+										>
+											+</button
+										><button
+											class="btn"
+											id="subtraction"
+											onclick="subtractNumbers()"
+										>
+											-
+										</button>
+										<button
+											class="btn"
+											id="multiplication"
+											onclick="multiplyNumbers()"
+										>
+											*</button
+										><button
+											class="btn"
+											id="division"
+											onclick="divideNumbers()"
+										>
+											/
+										</button>
+										<button
+											class="btn"
+											onclick="clearScreen()"
+										>
+											AC
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</div>
+<footer>GROUP 1: Alinda, Wilfred, Dominic, Richard, Gerald.</footer>
+<script src="../public/Bootstraps/js/bootstrap.js"></script>
+<script src="../public/js/calc.js"></script>
