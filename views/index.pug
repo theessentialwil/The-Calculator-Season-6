@@ -15,7 +15,7 @@ form(action='/' name='transactionentry' method="POST")
           h3 Simple Calc v1.2
           .card-body
             b
-              p#result
+            input#result.btn(type='text' name='result')
             .container
               .row
                 .col-sm-4.inputCol
@@ -34,15 +34,15 @@ form(action='/' name='transactionentry' method="POST")
                     .col
                       label(for='btn') Select Operator:
                       br
-                      button#addition.btn(onclick='addNumbers()')
+                      button#addition.btn(type='button' onclick='addNumbers()')
                         | +
-                      button#subtraction.btn(onclick='subtractNumbers()')
+                      button#subtraction.btn(type='button' onclick='subtractNumbers()')
                         | -
-                      button#multiplication.btn(onclick='multiplyNumbers()')
-                        | *
-                      button#division.btn(onclick='divideNumbers()')
+                      button#multiplication.btn(type='button' onclick='multiplyNumbers()')
+                        | x
+                      button#division.btn(type='button' onclick='divideNumbers()')
                         | /
-                      input.btn(type='submit', value='AC')
+                      input.btn(type='submit' value='AC')
       .col-sm-4
   footer GROUP 1: Alinda, Wilfred, Dominic, Richard, Gerald.
   script(src='./Bootstraps/js/bootstrap.js')

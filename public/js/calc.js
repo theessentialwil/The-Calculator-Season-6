@@ -1,3 +1,7 @@
+// document.querySelector('form[name="transactionentry"]').addEventListener('submit', function (event) {
+//   event.preventDefault();
+// });
+
 function addNumbers() {
   // Get the values of the input elements
   const num1 = parseInt(document.getElementById('num1').value);
@@ -7,7 +11,8 @@ function addNumbers() {
   const sum = num1 + num2;
 
   // Display the result in the paragraph element
-  document.getElementById('result').textContent = `${num1}+${num2} = ${sum}`;
+
+  document.getElementById('result').value = `${num1}+${num2} = ${sum}`;
 
   document.getElementById('operand').textContent = '+';
 }
@@ -21,7 +26,7 @@ function subtractNumbers() {
   const difference = num1 - num2;
 
   // Display the result in the paragraph element
-  document.getElementById('result').textContent = `${num1}-${num2} = ${difference}`;
+  document.getElementById('result').value = `${num1}-${num2} = ${difference}`;
 
   document.getElementById('operand').textContent = '-';
 }
@@ -35,7 +40,7 @@ function multiplyNumbers() {
   const product = num1 * num2;
 
   // Display the result in the paragraph element
-  document.getElementById('result').textContent = `${num1}*${num2} = ${product}`;
+  document.getElementById('result').value = `${num1}x${num2} = ${product}`;
 
   document.getElementById('operand').textContent = '*';
 }
@@ -49,7 +54,7 @@ function divideNumbers() {
   const quotient = num1 / num2;
 
   // Display the result in the paragraph element
-  document.getElementById('result').textContent = `${num1}/${num2} = ${quotient.toFixed(2)}`;
+  document.getElementById('result').value = `${num1}/${num2} = ${quotient.toFixed(2)}`;
 
   document.getElementById('operand').textContent = '/';
 }
