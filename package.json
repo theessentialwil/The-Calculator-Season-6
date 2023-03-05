@@ -37,13 +37,14 @@
     "session": "^0.1.0"
   },
   "devDependencies": {
+    "@types/jsdom-global": "^3.0.4",
     "chai": "^4.3.7",
     "eslint": "^8.35.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "install": "^0.13.0",
     "jsdom": "21.1.0",
-    "jsdom-global": "3.0.2",
+    "jsdom-global": "^3.0.2",
     "mocha": "^10.2.0"
   }
 }
