@@ -1,54 +1,67 @@
+// document.querySelector('form[name="transactionentry"]').addEventListener('submit', function (event) {
+//   event.preventDefault();
+// });
+
 function addNumbers() {
-	// Get the values of the input elements
-	let num1 = parseInt(document.getElementById("num1").value);
-	let num2 = parseInt(document.getElementById("num2").value);
+  // Get the values of the input elements
+  const num1 = parseInt(document.getElementById('num1').value);
+  const num2 = parseInt(document.getElementById('num2').value);
 
-	// Add the two numbers together
-	let sum = num1 + num2;
+  // Add the two numbers together
+  const sum = num1 + num2;
 
-	// Display the result in the paragraph element
-	document.getElementById("result").textContent = "Result = " + sum;
+  // Display the result in the paragraph element
+
+  document.getElementById('result').value = `${num1}+${num2} = ${sum}`;
+
+  document.getElementById('operand').textContent = '+';
 }
 
 function subtractNumbers() {
-	// Get the values of the input elements
-	let num1 = parseInt(document.getElementById("num1").value);
-	let num2 = parseInt(document.getElementById("num2").value);
+  // Get the values of the input elements
+  const num1 = parseInt(document.getElementById('num1').value);
+  const num2 = parseInt(document.getElementById('num2').value);
 
-	// Add the two numbers together
-	let difference = num1 - num2;
+  // Add the two numbers together
+  const difference = num1 - num2;
 
-	// Display the result in the paragraph element
-	document.getElementById("result").textContent = "Result = " + difference;
+  // Display the result in the paragraph element
+  document.getElementById('result').value = `${num1}-${num2} = ${difference}`;
+
+  document.getElementById('operand').textContent = '-';
 }
 
 function multiplyNumbers() {
-	// Get the values of the input elements
-	let num1 = parseInt(document.getElementById("num1").value);
-	let num2 = parseInt(document.getElementById("num2").value);
+  // Get the values of the input elements
+  const num1 = parseInt(document.getElementById('num1').value);
+  const num2 = parseInt(document.getElementById('num2').value);
 
-	// Add the two numbers together
-	let product = num1 * num2;
+  // Add the two numbers together
+  const product = num1 * num2;
 
-	// Display the result in the paragraph element
-	document.getElementById("result").textContent = "Result = " + product;
+  // Display the result in the paragraph element
+  document.getElementById('result').value = `${num1}x${num2} = ${product}`;
+
+  document.getElementById('operand').textContent = '*';
 }
 
 function divideNumbers() {
-	// Get the values of the input elements
-	let num1 = parseInt(document.getElementById("num1").value);
-	let num2 = parseInt(document.getElementById("num2").value);
+  // Get the values of the input elements
+  const num1 = parseInt(document.getElementById('num1').value);
+  const num2 = parseInt(document.getElementById('num2').value);
 
-	// Add the two numbers together
-	let quotient = num1 / num2;
+  // Add the two numbers together
+  const quotient = num1 / num2;
 
-	// Display the result in the paragraph element
-	document.getElementById("result").textContent =
-		"Result = " + quotient.toFixed(2);
+  // Display the result in the paragraph element
+  document.getElementById('result').value = `${num1}/${num2} = ${quotient.toFixed(2)}`;
+
+  document.getElementById('operand').textContent = '/';
 }
 
 function clearScreen() {
-	document.getElementById("result").textContent = "";
-	document.getElementById("num1").value = "";
-	document.getElementById("num2").value = "";
+  document.getElementById('result').textContent = '';
+  document.getElementById('num1').value = '';
+  document.getElementById('num2').value = '';
+  document.getElementById('operand').textContent = '';
 }
