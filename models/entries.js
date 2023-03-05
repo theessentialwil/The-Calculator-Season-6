@@ -3,14 +3,14 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 const userSchema = new mongoose.Schema({
   num1: {
-    type: Number
+    type: Number,
   },
   num2: {
-    type: Number
+    type: Number,
   },
   operator: {
-    type: String
-  }
-})
+    type: String,
+  },
+});
 
 module.exports = mongoose.model('TransactionRegister', userSchema);
