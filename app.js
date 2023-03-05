@@ -1,11 +1,13 @@
 // DEPENDENCIES (Or Plugins--------***** section in Anatomy of an Express Server
-require('dotenv').config();
 
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-const config = require('./config/db');
-const passport = require('passport');
+// const passport = require('passport');
+const dotenv = require('dotenv');
+
+// Environment variables
+dotenv.config();
 
 // Express session
 const expressSession = require('express-session')({
@@ -13,6 +15,9 @@ const expressSession = require('express-session')({
   resave: false, // don't save session if unmodified
   saveUninitialized: false, // don't create session until something is stored
 });
+
+// DB config file
+// const config = require('./config/db');
 
 // Import the User Model or Schema
 const ClientRegister = require('./models/entries');
@@ -25,7 +30,7 @@ const { exists } = require('./models/entries');
 const app = express();
 
 // SetUp Database Connections
-mongoose.connect(config.database, { useNewUrlParser: true });
+mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true });
 const db = mongoose.connection;
 
 // Check connection
@@ -58,4 +63,4 @@ app.get('*', (req, res) => {
 
 // BOOTSTRAPPING SERVER--------------***section in Anatomy of an Express Server
 
-app.listen(3800, () => console.log('Elders are listening on port 3800'));
+app.listen(process.env.PORT, () => console.log('Elders are listening on port 8080'));
