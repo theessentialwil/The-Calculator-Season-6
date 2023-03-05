@@ -24,6 +24,7 @@
   "homepage": "https://github.com/theessentialwil/Stevo-s-Calculator-App.git",
   "dependencies": {
     "connect-ensure-login": "^0.1.1",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "moment": "^2.29.4",
