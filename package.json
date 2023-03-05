@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "lint": "eslint",
-    "build" : "docker build . - t name"
+    "build" : "docker build . - t calculatorv1"
   },
   "repository": {
     "type": "git",
