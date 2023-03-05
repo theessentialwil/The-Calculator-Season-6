@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "lint": "eslint",
-    "build" : "docker build . - t calculatorv1"
+    "build": "docker build . - t calculatorv1"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/theessentialwil/Stevo-s-Calculator-App.git",
   "dependencies": {
     "connect-ensure-login": "^0.1.1",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "moment": "^2.29.4",
@@ -36,7 +37,7 @@
     "pug": "^3.0.2",
     "session": "^0.1.0"
   },
-    "devDependencies": {
+  "devDependencies": {
     "chai": "^4.3.7",
     "eslint": "^8.35.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -45,4 +46,3 @@
     "mocha": "^10.2.0"
   }
 }
-
