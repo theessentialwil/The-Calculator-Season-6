@@ -1,8 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const { get } = require('mongoose');
-const entryLogger = require('../logger');
+// const { get } = require('mongoose');
 
 // Importing the User Model or Schema
 const transactionEntry = require('../models/entries');
@@ -25,8 +24,5 @@ router.post('/', async (req, res) => {
     // console.log(error);
   }
 });
-
-entryLogger.info('New calculator entry created');
-entryLogger.error(`Unable to save calculator entry: ${err}`);
 
 module.exports = router;
