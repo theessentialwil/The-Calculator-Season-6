@@ -20,15 +20,15 @@ form(action='/' name='transactionentry' method="POST")
               br
               input#num1(type='number' name='num1' placeholder='Number')
             .col-sm
-              label(for='btn') Operand:
+              label(for='operator') Operand:
               br
-              button.btn(type='button' onclick='addNumbers()')
+              button.btn(type='button' name='operator' onclick='addNumbers()')
                 | +
-              button.btn(type='button' onclick='subtractNumbers()')
+              button.btn(type='button' name='operator' onclick='subtractNumbers()')
                 | -
-              button.btn(type='button' onclick='multiplyNumbers()')
+              button.btn(type='button' name='operator' onclick='multiplyNumbers()')
                 | *
-              button.btn(type='button' onclick='divideNumbers()')
+              button.btn(type='button' name='operator' onclick='divideNumbers()')
                 | /
               input.btn.pt-0.pb-0.mt-3(type='submit', value='AC')
             .col-sm
