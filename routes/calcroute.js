@@ -19,11 +19,11 @@ router.post('/', async (req, res) => {
   try {
     const transaction = new TransactionEntry(req.body);
     await transaction.save();
-    logger.info('Info: New calculation saved');
     res.redirect('/');
+    logger.info('Events Info: Saved calculation to DB');
   } catch (error) {
-    res.status(400).send('Sorry we were unable to save the transaction.');
-    logger.error('400 Calculation not saved');
+    logger.error('Events Error: Unable to save calculation.');
+    res.status(400).send('Error!');
   }
 });
 
