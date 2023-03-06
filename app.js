@@ -47,5 +47,4 @@ app.get('*', (req, res) => {
 
 // BOOTSTRAPPING SERVER--------------***section in Anatomy of an Express Server
 const { PORT } = process.env;
-console.log(process.env);
 app.listen(PORT, () => console.log(`Elders are listening on ${PORT}`));
