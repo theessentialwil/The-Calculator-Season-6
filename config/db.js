@@ -1,4 +1,3 @@
 module.exports = {
-  database: 'mongodb://localhost:27017/stevoscalculator',
-  secret: 'theemperor#4',
+  database: process.env.MONGO_URI,
 };

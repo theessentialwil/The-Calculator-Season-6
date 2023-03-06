@@ -1,4 +1,6 @@
 // DEPENDENCIES (Or Plugins--------*****
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -17,12 +19,12 @@ const db = mongoose.connection;
 
 // Check connection
 db.once('open', function () {
-  console.log('Connected to MongoDB now');
+	console.log('Connected to MongoDB now');
 });
 
 // Check for db errors
 db.on('error', function (err) {
-  console.error(err);
+	console.error(err);
 });
 
 // CONFIGURATIONS-------------------
@@ -44,5 +46,5 @@ app.get('*', (req, res) => {
 });
 
 // BOOTSTRAPPING SERVER--------------***section in Anatomy of an Express Server
-
-app.listen(3800, () => console.log('Elders are listening on port 3800'));
+const { PORT } = process.env;
+app.listen(PORT, () => console.log(`Elders are listening on ${PORT}`));
