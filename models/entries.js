@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     type: Number,
   },
   result: {
-    type: Number,
+    type: String,
   },
   operator: {
     type: String,
