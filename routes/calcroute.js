@@ -5,7 +5,7 @@ const router = express.Router();
 // const { get } = require('mongoose');
 
 // Importing the User Model or Schema
-const transactionEntry = require('../models/entries');
+const TransactionEntry = require('../models/entries');
 
 router.get('/', (req, res) => {
   res.render('index');
@@ -17,7 +17,7 @@ router.get('/index', (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const transaction = new transactionEntry(req.body);
+    const transaction = new TransactionEntry(req.body);
     await transaction.save();
     logger.info('Info: New calculation saved');
     res.redirect('/');
