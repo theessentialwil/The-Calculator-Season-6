@@ -1,4 +1,6 @@
-// DEPENDENCIES (Or Plugins--------*****
+// DEPENDENCIES (Or Plugins--------***** section in Anatomy of an Express Server
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -13,21 +15,23 @@ const app = express();
 
 // SetUp Database Connections
 mongoose.connect(config.database, { useNewUrlParser: true });
+mongoose.connect(config.database, { useNewUrlParser: true });
 const db = mongoose.connection;
 
 // Check connection
-db.once('open', function () {
+db.once('open', () => {
   console.log('Connected to MongoDB now');
 });
 
 // Check for db errors
-db.on('error', function (err) {
+db.on('error', (err) => {
   console.error(err);
 });
 
 // CONFIGURATIONS-------------------
 // eslint-disable-next-line no-underscore-dangle
 app.engine('pug', require('pug').__express);
+
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -40,6 +44,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', calcroute);
 
 app.get('*', (req, res) => {
+  res.send("404! Sorry the page you're looking for does not exists.");
+});
   res.send("404! Sorry the page you're looking for does not exists.");
 });
 
