@@ -46,8 +46,6 @@ app.use('/', calcroute);
 app.get('*', (req, res) => {
   res.send("404! Sorry the page you're looking for does not exists.");
 });
-  res.send("404! Sorry the page you're looking for does not exists.");
-});
 
 // BOOTSTRAPPING SERVER--------------***section in Anatomy of an Express Server
 
