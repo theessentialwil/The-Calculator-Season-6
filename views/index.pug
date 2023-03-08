@@ -47,12 +47,13 @@ form(action='/' name='transactionentry' method="POST")
         br
         br
         .history 
-          h5 History
-            if calculations
-              each item in calculations
-                p.histfont #{item.result}
-                  form(method="get" action='/')
-                    input(type="hidden" placeholder="" name="id", value=item._id)
+          h5.histitle History
+          hr
+          if calculations
+            each item in calculations
+              p.histfont #{item.result}
+                form(method="get" action='/')
+                  input(type="hidden" placeholder="" name="id", value=item._id)
       .col-sm-4
   footer GROUP 1: Alinda, Wilfred, Dominic, Richard, Gerald.
   script(src='./Bootstraps/js/bootstrap.js')

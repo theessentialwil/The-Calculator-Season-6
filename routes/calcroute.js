@@ -31,7 +31,6 @@ router.get('/', async (req, res) => {
   try {
     const results = await transactionEntry.find().sort({ $natural: -1 }).limit(5);
     res.render('index', { calculations: results });
-    console.log(results);
   } catch (error) {
     res.status(400).send('Sorry there is no history matching your request');
     console.log(error);
